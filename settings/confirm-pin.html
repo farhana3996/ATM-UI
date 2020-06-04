@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Bank</title>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/css/foundation.css">
+  <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.12.1-web/css/all.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript">
+
+    var url = "success.html";
+    var totalAttempts = 0;
+
+
+    function addNumber(value) {
+      var pin = document.getElementById("pinNo");
+      pin.value += value;
+    }
+
+    function clearPin() {
+      document.getElementById("pinNo").value = "";
+    }
+
+    function clearPad() {
+      document.getElementById("pinNo").value = "";
+    }
+
+    function validPinNumber() {
+
+      var form = document.getElementById("form");
+      var errorArea = document.getElementById("errorMessage");
+      var pinNo = document.getElementById("pinNo").value;
+
+      if (pinNo == "") {
+        window.alert("Enter PIN!");
+        clearPad()
+      }
+      else {
+        document.location.href = url;
+        return;
+      }
+
+
+      totalAttempts++;
+
+      if (totalAttempts == 3) {
+        form.style.display = "none";
+        window.alert("Too many attempts. Please try again later.");
+        document.location.href = "../index.html";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <div class="box-container settings">
+    <div class="box bg-grey">
+      <img src="../assets/img/logo.png" class="logo small">
+
+      <div class="grid-container">
+
+        <div class="grid-x grid-padding-x">
+          <div class="large-8 medium-8 cell mx-auto">
+            <div class="grid-x grid-padding-x new-pin">
+              <div class="medium-12 cell mx-auto">
+                <div class="grid-x grid-padding-x">
+                  <h5 class="text-center mt-1 mb-2" style="width: 100%;">Re-enter New PIN</h5>
+                </div>
+              </div>
+              <div class="medium-12 cell mx-auto">
+                <div class="grid-x grid-padding-x">
+                  <div class="medium-9 small-9 cell text-center">
+                    <input type="password" name="pinNumber" id="pinNo">
+                  </div>
+                </div>
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="1" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="2" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="3" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell">
+                <input class="button alert" type="submit" name="pinButton" id="pinButton" value="CANCEL"
+                  onclick="window.location='index.html'" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="4" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="5" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="6" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell">
+                <input class="button warning" type="button" name="pinButton" id="pinButton" onclick="clearPin()"
+                  value="CLEAR">
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="7" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="8" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="9" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell">
+                <input class="button success" type="submit" name="pinButton" id="pinButton" value="ENTER"
+                  onclick="validPinNumber()" />
+              </div>
+              <div class="medium-3 small-3 cell text-center"></div>
+              <div class="medium-3 small-3 cell text-center">
+                <input type="button" class="button circle" value="0" onclick="addNumber(this.value)" />
+              </div>
+              <div class="medium-3 small-3 cell text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../assets/js/vendor.js"></script>
+  <script src="../assets/js/foundation.js"></script>
+</body>
+
+</html>

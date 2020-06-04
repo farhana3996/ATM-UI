@@ -1,0 +1,264 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mx-auto {
+    margin: 0px auto;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.box-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.box-container .box {
+    width: 600px;
+    height: 600px;
+    max-width: 100%;
+    max-height: auto;
+	position:absolute;
+    left:0; 
+    right:0;
+    top:0; 
+    bottom:0;
+	margin:auto;
+	max-width:100%;
+	max-height:100%;
+	overflow:auto;
+}
+
+.bg-grey {
+    background-color: #efefef;
+}
+
+.logo {
+    width: 300px;
+    max-width: 100%;
+    position:absolute;
+    left:0; 
+    right:0;
+    top:0; 
+    bottom:0;
+	margin:auto;
+	max-width:100%;
+	max-height:100%;
+	overflow:auto;
+}
+
+.logo.small {
+    width: 200px;
+    display: block;
+    margin: 0px auto;
+    padding: 2.5rem 0rem;
+}
+
+.settings .logo.small {
+    width: 150px;
+    display: block;
+    margin: 0px auto;
+    padding: 2.5rem 0rem;
+}
+
+input[type='password'] {
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.button {
+    background-color: #37498B;
+    padding: 1.25em 1.05em;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 0.25rem;
+}
+
+.button:hover, .button:focus {
+    background-color: #1E3072
+}
+
+.button.alert {
+    background-color: #D6332A;
+}
+
+.button.alert:hover, .button.alert:focus {
+    background-color: #BD1A11;
+}
+
+.button.success {
+    background-color: #22AA48;
+}
+
+.button.success:hover, .button.success:focus {
+    background-color: #09912F
+}
+
+.button.round {
+    padding: 0.975em 1.05em;
+    border-radius: 2.5rem;
+    position:absolute;
+    bottom:125px;
+	right: 50%;
+    overflow:auto;
+}
+
+.box-container .box .main-menu .button {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+    font-size: 1rem;
+}
+
+.box-container .box .pin .button, .box-container .box .new-pin .button {
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #fff;
+    width: 90px;
+}
+
+.box-container .box .pin .button.circle, .box-container .box .new-pin .button.circle {
+    padding: 0.975em 1.15em;
+    border-radius: 2.25rem;
+    font-size: 1.2rem;
+    width: unset;
+}
+
+.box-container .box .success-container i {
+    font-size: 5rem;
+    color: #37498B;
+    display: block;
+    margin-bottom: 1.25rem;
+}
+
+.box-container .box .success-container {
+    padding: 12rem 0rem 0rem;
+    text-align: center;
+}
+
+.box-container .box .success-container .button {
+    display: block;
+    margin: 1rem auto;
+    width: 175px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.box-container .box .eject-gifs {    
+    margin-top: 15rem;
+}
+
+.box-container .box .eject-gif {    
+    position:absolute;
+    left:0; 
+    right:0;
+    top:125px; 
+    bottom:0;
+	margin:auto;
+	max-width:100%;
+	max-height:100%;
+	overflow:auto;
+}
+
+.eject h5 {
+    margin: 0px auto;
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    overflow:auto;
+    font-weight: 600;
+}
+
+.box-container .box.summary {
+    padding: 2rem 3rem;
+}
+
+.box-container .box.summary h4 {
+    font-weight: 600;
+    color: #37498B;
+    margin-bottom: 2rem;
+}
+
+.box-container .box.summary .card {
+    border: 3px solid #37498B;
+    border-radius: .5rem;
+}
+
+.box-container .box.summary .button-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    width: 100%;
+    padding: 0rem 3rem;
+}
+
+.box-container .box.summary .button-bottom .button {
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: .5px;
+    font-size: 1rem;
+}
+
+.box-container .box .new-pin h5 {
+    font-weight: bold;
+}
+
+@media (min-width: 0px) { 
+    .logo.small {
+        display: none;
+    }
+
+    .box-container .box .main-menu, .box-container .box .pin, .box-container .box .main-menu, .box-container .box .new-pin {
+        position:absolute;
+        left:0; 
+        right:0;
+        top: 0; 
+        bottom:0;
+        margin:auto;
+        overflow:auto;
+    }
+}
+
+@media (min-width: 576px) {   
+    .box-container .box .pin, .box-container .box .new-pin {
+        max-width: 70%;
+    }
+
+    .box-container .box .main-menu, .box-container .box .pin {
+        top: 100px;
+    }
+
+    .box-container .box .main-menu, .box-container .box .new-pin {
+        top: 75px;
+    }
+}
+
+@media (min-width: 640px) { 
+    .logo.small {
+        display: block;
+    }
+    .box-container .box .main-menu {
+        max-width: 80%;
+        max-height: 50%;
+    }
+    
+    .box-container .box .pin {
+        max-width: 70%;
+        max-height: 60%;
+    }
+    
+    .box-container .box .new-pin {
+        max-width: 70%;
+        max-height: 80%;
+    }
+}
